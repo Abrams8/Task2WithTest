@@ -19,7 +19,12 @@ public class Main {
             in.nextLine();
             System.out.println("Введено не число!");
         }
-        return in.nextInt();
+        int number = in.nextInt();
+        while (number<1000 || number>9999){
+            System.out.println("Введено не четырехзначное число!");
+            number = enterInt("Введите четырехзначное число: ");
+        }
+        return number;
     }
 
     public static boolean equalsSumTwoLastAndTwoSecondNumbers(int numberOne, int numberTwo) {
